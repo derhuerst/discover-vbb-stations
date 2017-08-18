@@ -1,7 +1,5 @@
 # discover-vbb-stations
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/derhuerst/discover-vbb-stations.svg)](https://greenkeeper.io/)
-
 **Discover [VBB](https://en.wikipedia.org/wiki/Verkehrsverbund_Berlin-Brandenburg) stations by querying departures.** It tries to find all stations that all trains known by VBB stop at. Analogous to [`discover-db-stations`](https://github.com/derhuerst/discover-db-stations).
 
 [![npm version](https://img.shields.io/npm/v/discover-vbb-stations.svg)](https://www.npmjs.com/package/discover-vbb-stations)
