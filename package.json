@@ -30,6 +30,6 @@
 	},
 	"scripts": {
 		"test": "node test.js",
-		"prepublish": "npm test"
+		"prepublishOnly": "npm test"
 	}
 }

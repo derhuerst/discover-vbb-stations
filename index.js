@@ -96,20 +96,20 @@ const walk = (first, opt = {}) => {
 		vbb.journeys(from, to, {passedStations: true, when: opt.when})
 		.then((journeys) => {
 			for (let journey of journeys) {
-				for (let part of journey.parts) {
-					if (!Array.isArray(part.passed)) continue
+				for (let leg of journey.legs) {
+					if (!Array.isArray(leg.passed)) continue
 
-					for (let i = 1; i < part.passed.length; i++) {
-						const p1 = part.passed[i - 1]
-						const p2 = part.passed[i]
+					for (let i = 1; i < leg.passed.length; i++) {
+						const p1 = leg.passed[i - 1]
+						const p2 = leg.passed[i]
 						const start = p1.arrival || p1.departure
 						const end = p2.arrival || p2.departure
 						if (!start || !end) continue
 						const duration = new Date(end) - new Date(start)
-						onEdge(p1.station, p2.station, duration, part.line)
+						onEdge(p1.station, p2.station, duration, leg.line)
 					}
 
-					const stations = part.passed.map((dep) => dep.station)
+					const stations = leg.passed.map((dep) => dep.station)
 					onStations(stations)
 				}
 			}
