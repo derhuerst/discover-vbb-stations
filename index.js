@@ -1,9 +1,9 @@
 'use strict'
 
+const {DateTime} = require('luxon')
 const {PassThrough} = require('stream')
 const Queue = require('queue')
 const vbb = require('vbb-hafas')
-const floor = require('floordate')
 
 const hour = 60 * 60 * 1000
 const week = 7 * 24 * hour
@@ -17,7 +17,10 @@ const walk = (first, opt = {}) => {
 	opt = Object.assign({}, defaults, opt)
 	if (!opt.when) {
 		// next Monday 10 am
-		opt.when = new Date(+floor(new Date(), 'week') + week + 10 * hour)
+		opt.when = DateTime.fromMillis(Date.now(), {
+			zone: 'Europe/Berlin',
+			locale: 'de-DE'
+		}).startOf('week').plus({weeks: 1, hours: 10}).toJSDate()
 	}
 
 	const out = new PassThrough({objectMode: true})
