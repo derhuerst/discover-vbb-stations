@@ -11,7 +11,7 @@
 ## Installing
 
 ```shell
-npm install -g discover-vbb-stations
+npm install discover-vbb-stations
 ```
 
 
@@ -19,8 +19,10 @@ npm install -g discover-vbb-stations
 
 ### using the command line
 
+Using [npx](https://www.npmjs.com/package/npx):
+
 ```shell
-discover-vbb-stations [station-id] >stations.ndjson
+npx discover-vbb-stations [station-id] >stations.ndjson
 ```
 
 ### using JavaScript
