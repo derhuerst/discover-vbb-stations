@@ -41,8 +41,8 @@ walk(stationId) // where to start
 	- `requests`: the number of requests sent
 	- `queued`: the number of queued station IDs
 - `edge`: a connection between two stations, with the following keys:
-	- `from`: an [FPTF](https://github.com/public-transport/friendly-public-transport-format) `station` object
-	- `to`: an [FPTF](https://github.com/public-transport/friendly-public-transport-format) `station` object
+	- `source`: a [*Friendly Public Transport Format* `1.0.1` `station` object](https://github.com/public-transport/friendly-public-transport-format/blob/1.0.1/spec/readme.md#station)
+	- `target`: a [*Friendly Public Transport Format* `1.0.1` `station` object](https://github.com/public-transport/friendly-public-transport-format/blob/1.0.1/spec/readme.md#station)
 	- `duration`: time to travel, in milliseconds
 	- `line`: an [vbb-hafas `line` object](https://github.com/derhuerst/vbb-hafas/blob/master/docs/journeys.md#response)
 

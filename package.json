@@ -27,12 +27,7 @@
 		"node": ">=6"
 	},
 	"dependencies": {
-		"ansi-diff-stream": "^1.2.0",
-		"ansi-escapes": "^3.0.0",
-		"luxon": "^0.3.1",
-		"mri": "^1.1.0",
-		"ndjson": "^1.5.0",
-		"queue": "^4.2.1",
+		"hafas-discover-stations": "^1.0.0",
 		"vbb-hafas": "^4.0.0"
 	},
 	"scripts": {
