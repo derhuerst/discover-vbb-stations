@@ -1,8 +1,9 @@
 'use strict'
 
 const createWalk = require('hafas-discover-stations')
-const vbb = require('vbb-hafas')
+const createHafas = require('vbb-hafas')
 
-const walk = createWalk(vbb)
+const hafas = createHafas('discover-vbb-stations')
+const walk = createWalk(hafas)
 
 module.exports = walk
