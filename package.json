@@ -28,7 +28,7 @@
 	},
 	"dependencies": {
 		"hafas-discover-stations": "^2.2.1",
-		"vbb-hafas": "^5.0.0"
+		"vbb-hafas": "^6.0.0"
 	},
 	"scripts": {
 		"test": "node test.js",
